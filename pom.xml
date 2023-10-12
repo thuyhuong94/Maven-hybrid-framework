@@ -150,6 +150,12 @@
             <version>1.18.24</version>
             <optional>true</optional>
         </dependency>
+
+        <dependency>
+            <groupId>org.aeonbits.owner</groupId>
+            <artifactId>owner</artifactId>
+            <version>1.0.12</version>
+        </dependency>
     </dependencies>
 
     <!-- Compiler/ Run Test -->
@@ -183,8 +189,6 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                 </configuration>
-
-
             </plugin>
         </plugins>
     </build>

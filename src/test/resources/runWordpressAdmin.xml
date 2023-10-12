@@ -9,8 +9,7 @@
         <listener class-name="org.uncommons.reportng.HTMLReporter" />
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
     </listeners>
-    <parameter name = "urlAdmin" value="http://seleniumtest/wp-admin/"/>
-    <parameter name = "urlUser" value="http://seleniumtest/"/>
+
     <test name="Run on Firefox">
         <parameter name="browser" value="firefox"/>
         <classes>
