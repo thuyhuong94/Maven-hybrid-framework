@@ -24,7 +24,7 @@ public class BaseTest {
     private WebDriver driver;
     protected final Log log;
 
-    @BeforeSuite
+    //@BeforeSuite
     public void initBeforeSuite(){
         deleteAllFileInFolder("allure-result");
     }

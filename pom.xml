@@ -156,6 +156,12 @@
             <artifactId>owner</artifactId>
             <version>1.0.12</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-clean-plugin</artifactId>
+            <version>3.0.0</version>
+        </dependency>
     </dependencies>
 
     <!-- Compiler/ Run Test -->
@@ -173,6 +179,23 @@
                 </configuration>
             </plugin>
 
+            <!--      Clear folder allure-result before run multiple suites          -->
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>allure-result</directory>
+                            <includes>
+                                <include>**/*</include>
+                            </includes>
+                            <followSymlinks>false</followSymlinks>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+
             <!-- Run test -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -182,6 +205,7 @@
                     <!-- Run TestNG xml file -->
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/runWordpressAdmin.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/runjQuery.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
                     <!-- Argument -->
